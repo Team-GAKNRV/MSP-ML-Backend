@@ -5,7 +5,9 @@ Backend for our ml model for the MSP project.
 This is the basic project structure:
 ```
 MSP-ML-Backend
+├── .env
 ├── main.py
+├── requirements.txt
 ├── api
 │   ├── v1
 │   │   ├── api.py
@@ -15,13 +17,25 @@ MSP-ML-Backend
 │   │   └── model_x_labels.pkl
 │   ├── models
 │   │   └── model_x.pt
-│   ├── scripts
-│   │   └── classification.py
-│   └── settings.py
-└── docs
-    └── images
-        └── model_x-metrics.jpg
+│   └── scripts
+│       └── classification.py
+├── docs
+│   └── images
+│       └── model_x-metrics.jpg
+└── temp
+    └── temp_image.jpg
 ```
+
+- `.env`: Holds necessary variables for the project to work (needs to be created by the user)
+- `main.py`: Entry point of the application
+- `requirements.txt`: List of all dependencies for the project
+- `api`: Holds all api versions and endpoints of the project
+- `core`
+  - `labels`: Pickled files of the labels
+  - `models`: Models for each label
+  - `scripts`: Scripts for classification and utils used in the api
+- `docs`: Documentation stuff
+- `temp`: Temporary storage for e.g. input images received via an api request
 
 ## Basic Setup
 1. You need to have `Python 3.10` or greater.
