@@ -23,5 +23,15 @@ MSP-ML-Backend
         └── model_x-metrics.jpg
 ```
 
+## Basic Setup
+1. You need to have `Python 3.10` or greater.
+1. Setup a virtual environment with `python -m venv .venv`
+1. Activate the virtual environment with `source .venv/Scripts/activate` (the path and file may change, depending on your operating system)
+1. Install all dependencies with `pip install -r requirements.txt`
+
+> Note: On Linux you may have to replace `python` with `python3`.
+
 ## Basic Usage
-Run the project with: `uvicorn main:app --reload`
+Run the project with `python main.py`
+
+> Note: On Linux you may have to replace `python` with `python3`.
