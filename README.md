@@ -5,22 +5,22 @@ Backend for our ml model for the MSP project.
 This is the basic project structure:
 ```
 MSP-ML-Backend
-├── __init__.py
 ├── main.py
+├── api
+│   ├── v1
+│   │   ├── api.py
+│   │   └── endpoints.py
 ├── core
+│   ├── labels
+│   │   └── model_x_labels.pkl
 │   ├── models
-│   │   ├── database.py
-│   │   └── __init__.py
-│   ├── schemas
-│   │   ├── __init__.py
-│   │   └── schema.py
+│   │   └── model_x.pt
+│   ├── scripts
+│   │   └── classification.py
 │   └── settings.py
-└── v1
-    ├── api.py
-    ├── endpoints
-    │   ├── endpoint.py
-    │   └── __init__.py
-    └── __init__.py 
+└── docs
+    └── images
+        └── model_x-metrics.jpg
 ```
 
 ## Basic Usage
