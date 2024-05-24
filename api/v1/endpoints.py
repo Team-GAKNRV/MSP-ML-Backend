@@ -14,23 +14,23 @@ async def read_root():
 
 @router.post("/classify")
 async def classify_uploaded_image(input_image: UploadFile = File(...)):
-    temp_file_path = f"{PATH_TEMP_FILES}/{uuid.uuid4()}.jpg"
+    input_image_path = f"{PATH_TEMP_FILES}/{uuid.uuid4()}.jpg"
 
-    with open(temp_file_path, "wb") as buffer:
+    with open(input_image_path, "wb") as buffer:
         buffer.write(input_image.file.read())
     
     classified_labels = CLASSIFIED_LABELS_ARRAY
 
-    article_type = classify_single_label(MODEL_ARTICLE_TYPE, LAYERS_ARTICLE_TYPE, TAG_NAME_ARTICLE_TYPE, input_image)
-    #base_colour = classify_single_label(MODEL_BASE_COLOUR, LAYERS_BASE_COLOUR, TAG_NAME_BASE_COLOUR, input_image)
-    #season = classify_single_label(MODEL_SEASON, LAYERS_SEASON, TAG_NAME_SEASON, input_image)
-    #usage = classify_single_label(MODEL_USAGE, LAYERS_USAGE, TAG_NAME_USAGE, input_image)
+    article_type = classify_single_label(MODEL_ARTICLE_TYPE, LAYERS_ARTICLE_TYPE, TAG_NAME_ARTICLE_TYPE, input_image_path)
+    base_colour = classify_single_label(MODEL_BASE_COLOUR, LAYERS_BASE_COLOUR, TAG_NAME_BASE_COLOUR, input_image_path)
+    season = classify_single_label(MODEL_SEASON, LAYERS_SEASON, TAG_NAME_SEASON, input_image_path)
+    usage = classify_single_label(MODEL_USAGE, LAYERS_USAGE, TAG_NAME_USAGE, input_image_path)
 
     classified_labels['articleType'] = article_type
-    #classified_labels['baseColour'] = base_colour
-    #classified_labels['season'] = season
-    #classified_labels['usage'] = usage
+    classified_labels['baseColour'] = base_colour
+    classified_labels['season'] = season
+    classified_labels['usage'] = usage
     
-    os.remove(temp_file_path)
+    os.remove(input_image_path)
     
     return classified_labels
