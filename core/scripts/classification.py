@@ -4,8 +4,9 @@ import torchvision.transforms as transforms
 import numpy as np
 import joblib
 
+from core.scripts.constants import PATH_LABELS
+from core.scripts.loss_functions import loss_fn
 from core.scripts.models import SingleHeadResNet50
-from src.loss_functions import single_loss_fn, loss_fn
 
 
 def classify_single_label(model_path: str, layers_count: int, tag_name: str, input_image_path: str) -> str:
@@ -33,7 +34,7 @@ def classify_single_label(model_path: str, layers_count: int, tag_name: str, inp
         output = model(image)
     
     out_label = np.argmax(output.cpu().numpy())
-    num_list_data = joblib.load(f"src/num_list_{tag_name}.pkl")
+    num_list_data = joblib.load(f"{PATH_LABELS}/{tag_name}.pkl")
 
     data_keys = list(num_list_data.keys())
     data_values = list(num_list_data.values())
