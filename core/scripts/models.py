@@ -28,4 +28,3 @@ class SingleHeadResNet50(nn.Module):
         x = F.adaptive_avg_pool2d(x, 1).reshape(batch_size, -1)
         l0 = self.l0(x)
         return l0
-
