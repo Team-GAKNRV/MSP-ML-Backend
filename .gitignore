@@ -4,9 +4,6 @@
 # Python
 **/__pycache__/
 
-# Environment Variables
-**/*.env
-
 # IntelliJ stuff
 .idea/
 
