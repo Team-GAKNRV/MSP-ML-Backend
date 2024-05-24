@@ -6,3 +6,10 @@
 
 # Environment Variables
 **/*.env
+
+# IntelliJ stuff
+.idea/
+
+# Project specific
+bruno/
+temp/
