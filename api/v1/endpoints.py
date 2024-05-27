@@ -16,6 +16,9 @@ async def read_root():
 async def classify_uploaded_image(input_image: UploadFile = File(...)):
     input_image_path = f"{PATH_TEMP_FILES}/{uuid.uuid4()}.jpg"
 
+    if not os.path.exists(PATH_TEMP_FILES):
+        os.mkdir(PATH_TEMP_FILES)
+
     with open(input_image_path, "wb") as buffer:
         buffer.write(input_image.file.read())
     
