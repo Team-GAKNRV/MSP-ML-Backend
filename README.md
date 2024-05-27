@@ -42,15 +42,19 @@ MSP-ML-Backend
 
 ## Basic Usage (docker)
 
-1. You need to have `docker` installed
-2. Set up the docker container with `docker build -t msp-ml-backend .`
-3. Run the container with `docker run -d -p 9000:9000 msp-ml-backend`
+1. [Install git lfs](https://git-lfs.com/)
+2. Download the models with `git lfs fetch --all`
+3. You need to have `docker` installed
+4. Set up the docker container with `docker build -t msp-ml-backend .`
+5. Run the container with `docker run -d -p 9000:9000 msp-ml-backend`
 
 ## Basic Usage (local)
 
-1. You need to have `Python 3.10` or greater
-2. Set up a virtual environment with `python -m venv .venv`
-3. Activate the virtual environment with `source .venv/Scripts/activate` (the path and file may change, depending on
+1. [Install git lfs](https://git-lfs.com/)
+2. Download the models with `git lfs fetch --all`
+3. You need to have `Python 3.10` or greater
+4. Set up a virtual environment with `python -m venv .venv`
+5. Activate the virtual environment with `source .venv/Scripts/activate` (the path and file may change, depending on
    your operating system)
-4. Install all dependencies with `pip install -r requirements.txt`
-5. Run the project with `python main.py`
+6. Install all dependencies with `pip install -r requirements.txt`
+7. Run the project with `python main.py`
