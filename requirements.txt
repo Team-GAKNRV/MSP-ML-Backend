@@ -8,3 +8,4 @@ torch
 numpy
 torchvision
 python-dotenv
+six
