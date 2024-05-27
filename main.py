@@ -1,7 +1,9 @@
-from fastapi import FastAPI
-from api.v1.api import api_router
 import os
+
 from dotenv import load_dotenv
+from fastapi import FastAPI
+
+from api.v1.api import api_router
 
 load_dotenv()
 
@@ -11,5 +13,5 @@ app.include_router(api_router, prefix="/api")
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.getenv("API_PORT"))
-    uvicorn.run(app, port=port)
+
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("API_PORT")))
