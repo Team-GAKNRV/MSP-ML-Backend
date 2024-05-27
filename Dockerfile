@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-LABEL authors="Team"
+LABEL authors="Team-GANKR"
 
 EXPOSE 9000
 
