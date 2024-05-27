@@ -10,7 +10,8 @@ router = APIRouter()
 
 @router.get("/")
 async def read_root():
-    return {"message": "Welcome to the API"}
+    return {"message": "API is working!"}
+
 
 @router.post("/classify")
 async def classify_uploaded_image(input_image: UploadFile = File(...)):
