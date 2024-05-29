@@ -1,2 +1,11 @@
 fastapi
 uvicorn[standard]
+joblib
+opencv-python
+pretrainedmodels
+pillow
+torch
+numpy
+torchvision
+python-dotenv
+six

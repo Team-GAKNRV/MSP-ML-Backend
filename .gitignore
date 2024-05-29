@@ -3,3 +3,10 @@
 
 # Python
 **/__pycache__/
+
+# IntelliJ stuff
+.idea/
+
+# Project specific
+bruno/
+temp/
