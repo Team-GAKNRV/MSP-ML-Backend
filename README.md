@@ -46,7 +46,7 @@ MSP-ML-Backend
 2. Place these models under `core/models`
 3. You need to have `docker` installed
 4. Set up the docker container with `docker build -t msp-ml-backend .`
-5. Run the container with `docker run -d -p 9000:9000 msp-ml-backend`
+5. Run the container with `docker run -d -p 9999:9999 msp-ml-backend`
 
 ## Basic Usage (local)
 
