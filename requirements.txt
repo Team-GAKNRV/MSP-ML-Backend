@@ -9,3 +9,4 @@ numpy
 torchvision
 python-dotenv
 six
+pandas
