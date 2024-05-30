@@ -1,10 +1,13 @@
 CLASSIFIED_LABELS_ARRAY = {
+    "masterCategory": "",
+    "subCategory": "",
     "articleType": "",
     "baseColour": "",
     "season": "",
     "usage": ""
 }
 
+PATH_ARTICLE_TYPE_RELATIONSHIP_DATA = "core/data/article_type_relationships.csv"
 PATH_LABELS = "core/labels"
 PATH_MODELS = "core/models"
 PATH_TEMP_FILES = "temp"

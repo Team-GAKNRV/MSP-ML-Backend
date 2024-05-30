@@ -10,3 +10,7 @@
 # Project specific
 bruno/
 temp/
+
+# Classification models
+core/models/*
+core/models/!place_models_here.txt
