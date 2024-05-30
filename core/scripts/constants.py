@@ -1,4 +1,6 @@
 CLASSIFIED_LABELS_ARRAY = {
+    "masterCategory": "",
+    "subCategory": "",
     "articleType": "",
     "baseColour": "",
     "season": "",
