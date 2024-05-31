@@ -1,7 +1,7 @@
 FROM python:3.12-slim
-LABEL authors="Team-GANKR"
+LABEL authors="Team-GAKNR"
 
-EXPOSE 9000
+EXPOSE 9999
 
 WORKDIR /app
 
